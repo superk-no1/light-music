@@ -18,7 +18,7 @@ dependencies:
     just_audio: ^0.9.36 # audio player
     just_audio_background: ^0.0.1-beta.11 # audio player background
     on_audio_query: ^2.9.0 # get songs from device
-    package_info_plus: ^5.0.1 # get app info
+    package_info_plus: 4.2.0 # get app info
     permission_handler: ^11.2.0 # get permission
     rxdart: ^0.27.7 # stream
     share_plus: ^7.2.2 # share song
