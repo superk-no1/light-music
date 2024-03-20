@@ -38,7 +38,7 @@ class _RecentsPageState extends State<RecentsPage> {
             Icons.arrow_back_ios_rounded,
           ),
         ),
-        title: const Text('Recents'),
+        title: const Text('最近播放'),
       ),
       body: Ink(
         decoration: BoxDecoration(

@@ -39,17 +39,17 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
             context: context,
             builder: (context) {
               return AlertDialog(
-                title: const Text('Create playlist'),
+                title: const Text('新建歌单'),
                 content: Form(
                   key: formKey,
                   child: TextFormField(
                     controller: controller,
                     decoration: const InputDecoration(
-                      hintText: 'Playlist name',
+                      hintText: '歌单名称',
                     ),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return 'Please enter a playlist name';
+                        return '请输入歌单名称';
                       }
                       if (playlists.any(
                         (playlist) =>
@@ -67,7 +67,7 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: const Text('Cancel'),
+                    child: const Text('取消'),
                   ),
                   TextButton(
                     onPressed: () async {
@@ -85,14 +85,14 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                         Navigator.of(context).pop();
                       }
                     },
-                    child: const Text('Create'),
+                    child: const Text('新建'),
                   ),
                 ],
               );
             },
           );
         },
-        label: const Text('Create playlist'),
+        label: const Text('新建歌单'),
         icon: const Icon(Icons.add),
       ),
       body: Ink(
@@ -123,7 +123,7 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
             ),
             const SizedBox(height: 32),
             const Text(
-              'Playlists',
+              '歌单',
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -183,11 +183,11 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                                   child: TextFormField(
                                     controller: controller,
                                     decoration: const InputDecoration(
-                                      hintText: 'Playlist name',
+                                      hintText: '歌单名称',
                                     ),
                                     validator: (value) {
                                       if (value!.isEmpty) {
-                                        return 'Please enter a playlist name';
+                                        return '请输入歌单名称';
                                       }
                                       if (playlists.any(
                                         (playlist) =>
@@ -205,7 +205,7 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
-                                    child: const Text('Cancel'),
+                                    child: const Text('取消'),
                                   ),
                                   TextButton(
                                     onPressed: () async {
@@ -235,16 +235,16 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: const Text('Delete playlist'),
+                                title: const Text('删除歌单'),
                                 content: const Text(
-                                  'Are you sure you want to delete this playlist?',
+                                  '你确认要删除这个歌单吗??',
                                 ),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
-                                    child: const Text('Cancel'),
+                                    child: const Text('取消'),
                                   ),
                                   TextButton(
                                     onPressed: () async {
@@ -258,7 +258,7 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                                         Navigator.of(context).pop();
                                       }
                                     },
-                                    child: const Text('Delete'),
+                                    child: const Text('删除'),
                                   ),
                                 ],
                               );
@@ -275,7 +275,7 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                           // ),
                           const PopupMenuItem(
                             value: 'delete',
-                            child: Text('Delete'),
+                            child: Text('删除'),
                           ),
                         ];
                       },

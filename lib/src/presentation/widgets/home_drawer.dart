@@ -37,7 +37,7 @@ class HomeDrawer extends StatelessWidget {
                       height: 8,
                     ),
                     const Text(
-                      'Meloplay',
+                      'GX Music',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -50,16 +50,23 @@ class HomeDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.info),
-            title: const Text('About'),
+            title: const Text('关于'),
             onTap: () {
               Navigator.of(context).pushNamed(AppRouter.aboutRoute);
             },
           ),
           ListTile(
             leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
+            title: const Text('设置'),
             onTap: () {
               Navigator.of(context).pushNamed(AppRouter.settingsRoute);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.logout),
+            title: const Text('退出登录'),
+            onTap: () {
+              //todo 退出登录逻辑
             },
           ),
         ],

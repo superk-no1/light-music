@@ -36,7 +36,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
             title: const Text(
-              'Settings',
+              '设置',
             ),
           ),
           body: Ink(
@@ -54,7 +54,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Themes',
+                    '主题',
                     style: TextStyle(
                       fontSize: 20,
                     ),

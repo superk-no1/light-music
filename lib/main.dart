@@ -44,7 +44,7 @@ Future<void> main() async {
   // initialize audio service
 
   await JustAudioBackground.init(
-    androidNotificationChannelName: 'Meloplay Audio',
+    androidNotificationChannelName: 'GX Music',
     androidNotificationOngoing: true,
     androidStopForegroundOnPause: true,
   );

@@ -5,7 +5,7 @@ class HomeRepository {
   final OnAudioQuery _audioQuery = sl<OnAudioQuery>();
 
   Future<List<SongModel>> getSongs() async {
-    // get all songs
+    // gxtag 获取歌曲
     var songs = await _audioQuery.querySongs();
 
     // remove songs less than 10 seconds long (10,000 milliseconds)

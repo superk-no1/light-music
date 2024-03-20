@@ -45,10 +45,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   final tabs = [
-    'Songs',
-    'Artists',
-    'Albums',
-    'Genres',
+    '歌曲',
+    '歌手',
+    '专辑',
+    '流派',
   ];
 
   @override
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           drawer: const HomeDrawer(),
           appBar: AppBar(
             backgroundColor: Themes.getTheme().primaryColor,
-            title: const Text('Meloplay'),
+            title: const Text('GX MUSIC'),
             // search button
             actions: [
               IconButton(
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         child: Row(
                           children: [
                             HomeCard(
-                              title: 'Favorites',
+                              title: '收藏',
                               icon: Icons.favorite_rounded,
                               color: const Color(0xFF5D2285),
                               onTap: () {
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             ),
                             const SizedBox(width: 16),
                             HomeCard(
-                              title: 'Playlists',
+                              title: '歌单',
                               icon: Icons.playlist_play,
                               color: const Color(0xFF136327),
                               onTap: () {
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             ),
                             const SizedBox(width: 16),
                             HomeCard(
-                              title: 'Recents',
+                              title: '最近播放',
                               icon: Icons.history,
                               color: const Color(0xFFD4850D),
                               onTap: () {

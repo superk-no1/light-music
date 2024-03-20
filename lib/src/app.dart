@@ -9,14 +9,13 @@ import 'package:meloplay/src/presentation/utils/theme/app_theme_data.dart';
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, state) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Meloplay',
+          title: 'GX Music',
           theme: AppThemeData.getTheme(),
           home: const SplashPage(),
           onGenerateRoute: (settings) => AppRouter.generateRoute(settings),

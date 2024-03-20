@@ -108,36 +108,36 @@ class _SongListTileState extends State<SongListTile> {
                       ),
                     ),
                     leading: const Icon(Icons.playlist_add),
-                    title: const Text('Add to queue'),
+                    title: const Text('下一首播放'),
                     onTap: () {
                       Navigator.of(context).pop();
                     },
                   ),
                   ListTile(
                     leading: const Icon(Icons.playlist_add),
-                    title: const Text('Add to playlist'),
+                    title: const Text('添加到歌单'),
                     onTap: () {
                       Navigator.of(context).pop();
                     },
                   ),
                   ListTile(
                     leading: const Icon(Icons.delete),
-                    title: const Text('Delete'),
+                    title: const Text('删除'),
                     onTap: () {
                       // Show a confirmation dialog before deleting the song
                       showDialog(
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: const Text('Delete Song'),
+                            title: const Text('删除歌曲'),
                             content: const Text(
-                                'Are you sure you want to delete this song?'),
+                                '你确认要删除这首歌吗?'),
                             actions: <Widget>[
                               TextButton(
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
-                                child: const Text('Cancel'),
+                                child: const Text('取消'),
                               ),
                               TextButton(
                                 onPressed: () async {
@@ -189,7 +189,7 @@ class _SongListTileState extends State<SongListTile> {
                                     Navigator.of(context).pop();
                                   }
                                 },
-                                child: const Text('Delete'),
+                                child: const Text('删除'),
                               ),
                             ],
                           );
@@ -199,7 +199,7 @@ class _SongListTileState extends State<SongListTile> {
                   ),
                   ListTile(
                     leading: const Icon(Icons.share),
-                    title: const Text('Share'),
+                    title: const Text('分享'),
                     onTap: () async {
                       List<XFile> files = [];
                       // convert song to xfile

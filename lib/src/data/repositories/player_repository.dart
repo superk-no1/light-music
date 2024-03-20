@@ -137,6 +137,7 @@ class PlayerRepository {
 
   // play from queue
   Future<void> playFromQueue(int index) async {
+    //gxtag 播放音乐
     await audioPlayer.seek(Duration.zero, index: index);
     await audioPlayer.play();
   }

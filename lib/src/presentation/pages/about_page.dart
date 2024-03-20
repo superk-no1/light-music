@@ -48,7 +48,7 @@ class _AboutPageState extends State<AboutPage> {
           ),
         ),
         title: const Text(
-          'About',
+          '关于',
         ),
       ),
       // package info
@@ -102,7 +102,7 @@ class _AboutPageState extends State<AboutPage> {
               ),
               const SizedBox(height: 32),
               const Text(
-                'Meloplay',
+                'GX Music',
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -110,7 +110,7 @@ class _AboutPageState extends State<AboutPage> {
               ),
               const SizedBox(height: 32),
               const Text(
-                'About',
+                '关于我',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -118,30 +118,14 @@ class _AboutPageState extends State<AboutPage> {
               ),
               const SizedBox(height: 16),
               const Text(
-                'Meloplay is an open source music player app that is built with Flutter. It is a simple music player app that can play music from your local storage.',
+                '🎵高欣的私人音乐馆🎵',
                 style: TextStyle(
                   fontSize: 16,
                 ),
               ),
               const SizedBox(height: 32),
-              // github
               const Text(
-                'Source Code',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 16),
-              TextButton(
-                onPressed: () {
-                  launchUrlString(Links.sourceCode);
-                },
-                child: const Text("Github"),
-              ),
-              const SizedBox(height: 32),
-              const Text(
-                'Contact',
+                '联系我',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -149,9 +133,9 @@ class _AboutPageState extends State<AboutPage> {
               ),
               TextButton(
                 onPressed: () {
-                  launchUrlString('mailto:shokhrukhbekdev@gmail.com');
+                  launchUrlString('XXX@qq.com');
                 },
-                child: const Text("Email"),
+                child: const Text("XXX@qq.com"),
               ),
             ],
           ),

@@ -38,7 +38,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
             Icons.arrow_back_ios_rounded,
           ),
         ),
-        title: const Text('Favorites'),
+        title: const Text('收藏'),
       ),
       body: Ink(
         decoration: BoxDecoration(
