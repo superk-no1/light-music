@@ -7,6 +7,7 @@ class SongRepository {
       50; // Maximum number of recently played songs to store
 
   Future<void> toggleFavorite(String songId) async {
+    //todo 切换收藏状态 /song/like /song/unlike
     List<String> favoriteSongs = box.get(
       HiveBox.favoriteSongsKey,
       defaultValue: List<String>.empty(

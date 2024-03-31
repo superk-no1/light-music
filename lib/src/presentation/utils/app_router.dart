@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio_background/just_audio_background.dart';
+import 'package:meloplay/src/presentation/pages/login_page.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
 import 'package:meloplay/src/presentation/pages/about_page.dart';
@@ -26,6 +27,7 @@ class AppRouter {
   static const String genreRoute = '/genre';
   static const String aboutRoute = '/about';
   static const String settingsRoute = '/settings';
+  static const String loginRoute = '/login';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -80,6 +82,10 @@ class AppRouter {
       case settingsRoute:
         return MaterialPageRoute<dynamic>(
           builder: (_) => const SettingsPage(),
+        );
+      case loginRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const LoginPage(),
         );
       default:
         return MaterialPageRoute<dynamic>(

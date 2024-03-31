@@ -10,6 +10,7 @@ class FavoritesRepository {
 
   final box = Hive.box('myBox');
   Future<List<SongModel>> fetchFavorites() async {
+    //todo 收藏列表
     List<String> favoriteSongsIds = box.get(
       HiveBox.favoriteSongsKey,
       defaultValue: List<String>.empty(),

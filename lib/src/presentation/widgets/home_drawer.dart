@@ -66,7 +66,7 @@ class HomeDrawer extends StatelessWidget {
             leading: const Icon(Icons.logout),
             title: const Text('退出登录'),
             onTap: () {
-              //todo 退出登录逻辑
+              Navigator.of(context).pushNamed(AppRouter.loginRoute);
             },
           ),
         ],
