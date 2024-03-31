@@ -5,6 +5,8 @@ import 'package:meloplay/src/presentation/utils/app_router.dart';
 import 'package:meloplay/src/presentation/utils/assets.dart';
 import 'package:meloplay/src/presentation/utils/theme/themes.dart';
 
+import '../utils/global.dart';
+
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({
     super.key,
@@ -36,9 +38,9 @@ class HomeDrawer extends StatelessWidget {
                     const SizedBox(
                       height: 8,
                     ),
-                    const Text(
-                      'GX Music',
-                      style: TextStyle(
+                    Text(
+                      Global.profile.username,
+                      style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
