@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:meloplay/src/data/model/networkSongModel.dart';
 import 'package:meloplay/src/data/model/userModel.dart';
 import 'package:meloplay/src/presentation/utils/global.dart';
+import 'package:on_audio_query/on_audio_query.dart';
 
 final apiManager = ApiManager();
 
@@ -28,7 +28,7 @@ class ApiManager {
     return '';
   }
 
-  Future<List<NetworkSongModel>> getNetworkSongs() async {
+  Future<List<SongModel>> getNetworkSongs() async {
     var resultData = await dio.get('/song/all');
     if (resultData.statusCode == 200) {
       return resultData.data;

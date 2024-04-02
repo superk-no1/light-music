@@ -9,14 +9,22 @@ class NetworkSongModel {
   @JsonKey(defaultValue: '')
   String title;
   @JsonKey(defaultValue: '')
-  String artist;
+  String album;
+  @JsonKey(defaultValue: 0)
+  int albumId;
   @JsonKey(defaultValue: '')
-  String sourceUrl;
+  String artist;
+  @JsonKey(defaultValue: 0)
+  int duration;
+  @JsonKey(defaultValue: '')
+  String data;
+  @JsonKey(defaultValue: '')
+  String uri;
   @JsonKey(defaultValue: 0)
   int likeCount;
 
-  NetworkSongModel(
-      this.id, this.title, this.artist, this.sourceUrl, this.likeCount);
+  NetworkSongModel(this.id, this.title, this.album, this.albumId, this.artist,
+      this.duration, this.data, this.uri, this.likeCount);
 
   factory NetworkSongModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkSongModelFromJson(json);
