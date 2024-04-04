@@ -110,8 +110,10 @@ class _LoginPageState extends State<LoginPage> {
       if (resultDate.id.isNotEmpty) {
         Global.profile = resultDate;
         pageType = LoginType.login;
-        //todo 添加toast
+        //kk todo 添加toast
         setState(() {});
+      } else {
+
       }
     }
   }
@@ -124,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
         Global.token = resultDate;
         Navigator.of(context).pop();
       } else {
-        //todo 登录失败
+        //kk todo 登录失败
       }
     }
   }

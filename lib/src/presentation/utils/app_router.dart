@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:meloplay/src/presentation/pages/login_page.dart';
+import 'package:meloplay/src/presentation/pages/suggest_page.dart';
+import 'package:meloplay/src/presentation/utils/global.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
 import 'package:meloplay/src/presentation/pages/about_page.dart';
@@ -10,7 +12,6 @@ import 'package:meloplay/src/presentation/pages/favorites_page.dart';
 import 'package:meloplay/src/presentation/pages/genre_page.dart';
 import 'package:meloplay/src/presentation/pages/home/home_page.dart';
 import 'package:meloplay/src/presentation/pages/player_page.dart';
-import 'package:meloplay/src/presentation/pages/playlists_page.dart';
 import 'package:meloplay/src/presentation/pages/recents_page.dart';
 import 'package:meloplay/src/presentation/pages/settings_page.dart';
 import 'package:meloplay/src/presentation/pages/splash_page.dart';
@@ -44,13 +45,19 @@ class AppRouter {
           builder: (_) => const FavoritesPage(),
         );
       case playlistsRoute:
-        return MaterialPageRoute<dynamic>(
-          builder: (_) => const PlaylistsPage(),
-        );
+        {
+          Global.suggestStatus = true;
+          return MaterialPageRoute<dynamic>(
+            builder: (_) => const SuggestPage(),
+          );
+        }
       case recentsRoute:
-        return MaterialPageRoute<dynamic>(
-          builder: (_) => const RecentsPage(),
-        );
+        {
+          Global.suggestStatus = false;
+          return MaterialPageRoute<dynamic>(
+            builder: (_) => const RecentsPage(),
+          );
+        }
       case playerRoute:
         return MaterialPageRoute<dynamic>(
           builder: (_) => PlayerPage(

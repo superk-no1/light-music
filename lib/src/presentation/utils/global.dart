@@ -5,4 +5,6 @@ class Global {
   static UserModel profile = UserModel.fromJson({});
 
   static String token = '';
+
+  static bool suggestStatus = false;
 }

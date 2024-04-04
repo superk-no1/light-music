@@ -1,5 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:meloplay/src/data/services/hive_box.dart';
+import 'package:meloplay/src/presentation/utils/apiManager.dart';
 
 class SongRepository {
   final box = Hive.box('myBox');
@@ -16,8 +17,10 @@ class SongRepository {
     );
     if (favoriteSongs.contains(songId)) {
       favoriteSongs.remove(songId);
+      apiManager.unlikeSong(songId);
     } else {
       favoriteSongs.add(songId);
+      apiManager.likeSong(songId);
     }
     await box.put(HiveBox.favoriteSongsKey, favoriteSongs);
   }

@@ -23,7 +23,6 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
   }
 
   Future<void> fetchPlaylists() async {
-    //todo 歌单列表 /api/playList/all
     final playlists = await audioQuery.queryPlaylists();
     setState(() {
       this.playlists.clear();
@@ -75,7 +74,6 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                       if (!formKey.currentState!.validate()) {
                         return;
                       }
-                      //todo 新建歌单 /api/playList/add
                       await audioQuery.createPlaylist(
                         controller.text.trim(),
                       );
@@ -125,7 +123,7 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
             ),
             const SizedBox(height: 32),
             const Text(
-              '歌单',
+              '推荐',
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -250,7 +248,6 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
                                   ),
                                   TextButton(
                                     onPressed: () async {
-                                      //todo 删除歌单 /api/playList/delete
                                       await audioQuery.removePlaylist(
                                         playlist.id,
                                       );

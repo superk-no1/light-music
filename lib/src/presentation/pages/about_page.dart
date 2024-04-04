@@ -4,6 +4,8 @@ import 'package:meloplay/src/presentation/utils/assets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+import '../utils/global.dart';
+
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
 
@@ -117,9 +119,9 @@ class _AboutPageState extends State<AboutPage> {
                 ),
               ),
               const SizedBox(height: 16),
-              const Text(
-                '🎵高欣的私人音乐馆🎵',
-                style: TextStyle(
+              Text(
+                '🎵${Global.profile.username}的私人音乐馆🎵',
+                style: const TextStyle(
                   fontSize: 16,
                 ),
               ),

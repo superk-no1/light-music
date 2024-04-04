@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             ),
                             const SizedBox(width: 16),
                             HomeCard(
-                              title: '歌单',
+                              title: '推荐',
                               icon: Icons.playlist_play,
                               color: const Color(0xFF136327),
                               onTap: () {

@@ -7,11 +7,11 @@ part 'userModel.g.dart';
 class UserModel {
   @JsonKey(defaultValue: '')
   String id;
-  @JsonKey(defaultValue: '')
+  @JsonKey(defaultValue: 'GaoXin')
   String username;
   @JsonKey(defaultValue: '')
   String password;
-  List<NetworkSongModel> favorites;
+  List<NetworkSongModel>? favorites;
 
   UserModel(this.id, this.username, this.password, this.favorites);
 

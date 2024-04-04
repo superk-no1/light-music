@@ -1,3 +1,5 @@
+import 'dart:core';
+
 import 'package:dio/dio.dart';
 import 'package:meloplay/src/data/model/userModel.dart';
 import 'package:meloplay/src/presentation/utils/global.dart';
@@ -28,6 +30,14 @@ class ApiManager {
     return '';
   }
 
+  Future<UserModel> updateProfile() async {
+    var resultData = await dio.get('/user/me');
+    if (resultData.statusCode == 200) {
+      return UserModel.fromJson(resultData.data);
+    }
+    return UserModel.fromJson({});
+  }
+
   Future<List<SongModel>> getNetworkSongs() async {
     var resultData = await dio.get('/song/all');
     if (resultData.statusCode == 200) {
@@ -35,6 +45,28 @@ class ApiManager {
     }
     return [];
   }
-}
 
-class NetResult {}
+  Future<bool> syncLocalSongs(List<String> songIds) async {
+    var resultData =
+        await dio.post('/song/upload', data: {'localSongs': songIds});
+    return resultData.statusCode == 200;
+  }
+
+  Future<bool> likeSong(String songId) async {
+    var resultData = await dio.get('/song/like');
+    return resultData.statusCode == 200;
+  }
+
+  Future<bool> unlikeSong(String songId) async {
+    var resultData = await dio.get('/song/unlike');
+    return resultData.statusCode == 200;
+  }
+
+  Future<List<String>> getSuggestSongs() async {
+    var resultData = await dio.get('/song/suggest');
+    if (resultData.statusCode == 200) {
+      return resultData.data;
+    }
+    return [];
+  }
+}
