@@ -8,7 +8,7 @@ part of 'userModel.dart';
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       json['id'] as String? ?? '',
-      json['username'] as String? ?? '',
+      json['username'] as String? ?? 'GaoXin',
       json['password'] as String? ?? '',
       (json['favorites'] as List<dynamic>?)
           ?.map((e) => NetworkSongModel.fromJson(e as Map<String, dynamic>))

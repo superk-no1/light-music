@@ -12,8 +12,11 @@ import 'package:meloplay/src/presentation/utils/theme/themes.dart';
 import 'package:meloplay/src/service_locator.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
+import '../utils/app_router.dart';
+
 class PlayerPage extends StatefulWidget {
   final MediaItem mediaItem;
+
   const PlayerPage({
     super.key,
     required this.mediaItem,
@@ -119,6 +122,24 @@ class _PlayerPageState extends State<PlayerPage> {
                                 },
                               );
                             },
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomLeft,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context)
+                                  .pushNamed(AppRouter.commentRoute);
+                            },
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              margin: const EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(18),
+                                  color: Colors.green),
+                              child: Icon(Icons.comment),
+                            ),
                           ),
                         ),
                       ],
