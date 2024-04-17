@@ -101,7 +101,7 @@ class AppRouter {
       case commentRoute:
         return MaterialPageRoute<dynamic>(
             builder: (_) => CommentPage(
-                  songId: '1000008445',
+                  songId: settings.arguments as String,
                 ));
       case searchRoute:
         return MaterialPageRoute<dynamic>(builder: (_) => SearchSongPage());

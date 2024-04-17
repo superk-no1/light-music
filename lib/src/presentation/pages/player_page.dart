@@ -128,8 +128,9 @@ class _PlayerPageState extends State<PlayerPage> {
                           alignment: Alignment.bottomLeft,
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.of(context)
-                                  .pushNamed(AppRouter.commentRoute);
+                              Navigator.of(context).pushNamed(
+                                  AppRouter.commentRoute,
+                                  arguments: widget.mediaItem.id);
                             },
                             child: Container(
                               height: 50,
