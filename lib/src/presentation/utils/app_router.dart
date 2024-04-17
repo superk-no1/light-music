@@ -15,6 +15,7 @@ import 'package:meloplay/src/presentation/pages/home/home_page.dart';
 import 'package:meloplay/src/presentation/pages/player_page.dart';
 import 'package:meloplay/src/presentation/pages/recents_page.dart';
 import 'package:meloplay/src/presentation/pages/settings_page.dart';
+import 'package:meloplay/src/presentation/pages/search_page.dart';
 import 'package:meloplay/src/presentation/pages/splash_page.dart';
 
 class AppRouter {
@@ -31,6 +32,7 @@ class AppRouter {
   static const String settingsRoute = '/settings';
   static const String loginRoute = '/login';
   static const String commentRoute = '/comment';
+  static const String searchRoute = '/search';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -101,6 +103,8 @@ class AppRouter {
             builder: (_) => CommentPage(
                   songId: '1000008445',
                 ));
+      case searchRoute:
+        return MaterialPageRoute<dynamic>(builder: (_) => SearchSongPage());
       default:
         return MaterialPageRoute<dynamic>(
           builder: (_) => const SplashPage(),

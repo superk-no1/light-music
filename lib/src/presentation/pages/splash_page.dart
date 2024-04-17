@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
     // after 1 seconds, navigate to home page
     Future.delayed(
       const Duration(seconds: 1),
-      () => Navigator.pushReplacementNamed(context, AppRouter.homeRoute),
+      () => Navigator.pushReplacementNamed(context, AppRouter.loginRoute),
     );
   }
 

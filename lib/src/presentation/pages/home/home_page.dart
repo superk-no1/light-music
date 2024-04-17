@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             actions: [
               IconButton(
                 onPressed: () {
-                  // TODO: implement search
+                  Navigator.of(context).pushNamed(AppRouter.searchRoute);
                 },
                 icon: const Icon(Icons.search_rounded),
               )

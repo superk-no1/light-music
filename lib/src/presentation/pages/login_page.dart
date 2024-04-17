@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:meloplay/src/presentation/utils/apiManager.dart';
 import 'package:meloplay/src/presentation/utils/global.dart';
 
+import 'package:meloplay/src/presentation/pages/home/home_page.dart';
+import 'package:meloplay/src/presentation/utils/app_router.dart';
+
 enum LoginType { register, login }
 
 class LoginPage extends StatefulWidget {
@@ -124,9 +127,10 @@ class _LoginPageState extends State<LoginPage> {
           _unameController.text, _pwdController.text);
       if (resultDate.isNotEmpty) {
         Global.token = resultDate;
-        Navigator.of(context).pop();
+        Navigator.of(context).pushNamed(
+          AppRouter.homeRoute,
+        );
       } else {
-        //kk todo 登录失败
       }
     }
   }
